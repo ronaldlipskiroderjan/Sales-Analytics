@@ -36,7 +36,7 @@ public class ExcelService {
             //Loop simples para preencher o cabeçalho
             for (int i = 0; i < colunas.length; i++) {
                 Cell cell = headerRow.createCell(i);
-                cell.setCellValue(colunas[i];
+                cell.setCellValue(colunas[i]);
 
 
                 // Estilo extra: deixar negrito
@@ -52,10 +52,10 @@ public class ExcelService {
             for (Sale venda : vendas) {
                 Row row  = sheet.createRow(rowIdx++);
 
-                row.createCell(0).setCellValue(Venda.getId());
-                row.createcell(1).setCellValue(venda.getProduto());
+                row.createCell(0).setCellValue(venda.getId());
+                row.createCell(1).setCellValue(venda.getProduto());
                 row.createCell(2).setCellValue(venda.getValor());
-                row.createCell(3).setCellValue(venda.getDataVenda().toString);
+                row.createCell(3).setCellValue(venda.getDataVenda().toString());
             }
 
             // Escreve tudo no output
